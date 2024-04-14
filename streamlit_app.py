@@ -46,8 +46,8 @@ def desencriptarMensajeAES(nonce, llave, textoCifrado, tag):
 #Se definen las funcion para el cifrado de la llave de sesión con PKCS1_OAEP, con la llave pública del usuario
 #https://cryptobook.nakov.com/asymmetric-key-ciphers/rsa-encrypt-decrypt-examples
 def RSAEncriptarKEM(llavePublicaUsuario, llaveSimetrica):
-    cifradoRSA = PKCS1_OAEP.new(RSA.importKey(llavePublicaUsuario.getvalue()))
     try:
+        cifradoRSA = PKCS1_OAEP.new(RSA.importKey(llavePublicaUsuario.getvalue()))
         llaveCifrada = cifradoRSA.encrypt(llaveSimetrica)
         return llaveCifrada
     except (ValueError, TypeError):
@@ -82,10 +82,9 @@ def firmaHash(mensajeUsuario, llavePrivadaUsuario,contraUsuario):
 
 #Se define la función para verificar la firma del mensaje usando PKCS115_SigScheme, con la llave pública del usuario
 def verificaHash(hashMensaje, firmaHash, llavePublicaUsuario):
-    llavePublicaUsuario = RSA.import_key(llavePublicaUsuario.getvalue())
-    verificaUsuarioA = PKCS115_SigScheme(llavePublicaUsuario)
-
     try:
+        llavePublicaUsuario = RSA.import_key(llavePublicaUsuario.getvalue())
+        verificaUsuarioA = PKCS115_SigScheme(llavePublicaUsuario)
         verificaUsuarioA.verify(hashMensaje, firmaHash)
         return hashMensaje
     except (ValueError, TypeError):
