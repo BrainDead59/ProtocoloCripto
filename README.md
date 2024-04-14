@@ -1,6 +1,15 @@
 # Protocolo Cripto
 Este proyecto connsiste en el desarrollo de un protocolo de comunicación simple simulado, mediante el uso del lenguaje python y el framework streamlit.
 
+## Integrantes
+
+- Díaz Hernández Marcos Bryan
+- Fernández Rosales Sebastián
+- Medina Segura Fernando 
+- Robledo Aguirre Eduardo 
+- Toledo Sánchez Roberto
+
+
 ## Algoritmos implementados
 - Simetrico: AES
 - Generar llaves: RSA(2048)
