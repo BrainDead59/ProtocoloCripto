@@ -20,7 +20,7 @@ Este proyecto connsiste en el desarrollo de un protocolo de comunicación simple
 
 ## Modo de uso
 
-Derigirse al siguiente link: https://protocolocripto.streamlit.app/, se abrira la interfaz gráfica de simulación, donde se podra visualizar el usuario que comienza la conversación.
+Dirigirse al siguiente link: https://protocolocripto.streamlit.app/, se abrira la interfaz gráfica de simulación, donde se podra visualizar el usuario que comienza la conversación.
 
 ### Interfaz de inicio
 
